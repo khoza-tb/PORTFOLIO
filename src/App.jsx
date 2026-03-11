@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import Skills from "./pages/Skills";
-import Work from "./pages/Work";      // Must exactly match Work.jsx
+import Work from "./pages/Work"; // must exactly match Work.jsx
 import About from "./pages/About";
 import Connect from "./pages/Connect";
 
