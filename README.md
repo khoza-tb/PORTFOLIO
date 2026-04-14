@@ -1,16 +1,72 @@
-# React + Vite
+Personal Portfolio – Tsepo Bonginkosi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive developer portfolio website showcasing my skills, projects, and experience as a Software Developer.
 
-Currently, two official plugins are available:
+🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 https://portfolio-three-hazel-70.vercel.app/
 
-## React Compiler
+📌 Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This portfolio is designed to present my work and skills in a clean, interactive, and professional way. It highlights my ability to build modern web applications using current technologies.
 
-## Expanding the ESLint configuration
+✨ Features
+🎯 Clean and modern UI design
+⚡ Fast performance with Vite
+📱 Fully responsive (mobile & desktop)
+🎞️ Smooth animations using Framer Motion
+🧭 Multi-page navigation with React Router
+📂 Project showcase with live demos
+📞 Contact section for easy communication
+🧱 Sections
+🏠 Hero
+Introduction
+Name and role
+Call-to-action buttons
+🧠 About
+Background (TUT Diploma in IT – Software Development)
+Skills and interests
+🛠 Skills
+React
+JavaScript
+Tailwind CSS
+HTML & CSS
+Git & GitHub
+🚀 Projects
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+🌐 Portfolio Website
+Personal branding
+Responsive design
+📞 Contact
+Email
+GitHub
+LinkedIn
+🎨 Design & Theme
+Element	Color
+Primary	#D60000
+Background	#111111
+Secondary	#1A1A1A
+Text	#FFFFFF
+🛠 Tech Stack
+⚛️ React
+⚡ Vite
+🎨 Tailwind CSS
+🎞️ Framer Motion
+🧭 React Router DOM
+📜 JavaScript (ES6+)
+📂 Project Structure
+src/
+│
+├── components/
+├── pages/
+├── assets/
+│
+├── App.jsx
+└── main.jsx
+⚙️ Installation
+npm install
+💻 Run Locally
+npm run dev
+📦 Build
+npm run build
