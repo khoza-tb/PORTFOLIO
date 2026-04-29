@@ -1,53 +1,51 @@
-Personal Portfolio – Tsepo Bonginkosi
 
-A modern and responsive developer portfolio website showcasing my skills, projects, and experience as a Software Developer.
+🚀 Personal Portfolio Website
+Welcome to my personal portfolio! This project showcases my skills, projects, and experience as a frontend developer.
 
-🚀 Live Demo
+🧑‍💻 About Me
+Hi, Tsepo Khoza, a passionate MERN stack developer focused on building modern, responsive, and user-friendly web applications. I enjoy turning complex problems into simple, beautiful, and intuitive designs.
 
-👉 https://portfolio-three-hazel-70.vercel.app/
+🌐 Live Demo
+🔗 https://portfolio-three-hazel-70.vercel.app/
 
-📌 Overview
+⚙️ Tech Stack
+Frontend: React.js, Next.js
 
-This portfolio is designed to present my work and skills in a clean, interactive, and professional way. It highlights my ability to build modern web applications using current technologies.
+Styling: Tailwind CSS
 
-✨ Features
-🎯 Clean and modern UI design
-⚡ Fast performance with Vite
-📱 Fully responsive (mobile & desktop)
-🎞️ Smooth animations using Framer Motion
-🧭 Multi-page navigation with React Router
-📂 Project showcase with live demos
-📞 Contact section for easy communication
-🧱 Sections
-🏠 Hero
-Introduction
-Name and role
-Call-to-action buttons
-🧠 About
-Background (TUT Diploma in IT – Software Development)
-Skills and interests
-🛠 Skills
-React
-JavaScript
-Tailwind CSS
-HTML & CSS
-Git & GitHub
-🚀 Projects
+Language: TypeScript / JavaScript
 
+Deployment: Vercel
 
-🌐 Portfolio Website
-Personal branding
-Responsive design
-📞 Contact
-Email
-GitHub
-LinkedIn
-🎨 Design & Theme
-Element	Color
-Primary	#D60000
-Background	#111111
-Secondary	#1A1A1A
-Text	#FFFFFF
+📂 Features
+Responsive design (mobile-first)
+
+Clean and modern UI
+
+Projects showcase section
+
+About me section
+
+Contact information
+
+🚀 Getting Started
+If you want to run this project locally:
+
+# Clone the repository
+git clone https://github.com/your-username/your-repo-name.git
+
+# Navigate into the project
+cd your-repo-name
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+📬 Contact
+📧 Email: tsepokhoza266@gmail.com
+
+📱 Phone: 0769796577 
 🛠 Tech Stack
 ⚛️ React
 ⚡ Vite
@@ -64,9 +62,3 @@ src/
 │
 ├── App.jsx
 └── main.jsx
-⚙️ Installation
-npm install
-💻 Run Locally
-npm run dev
-📦 Build
-npm run build
