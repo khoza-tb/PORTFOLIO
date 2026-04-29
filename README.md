@@ -1,8 +1,7 @@
 
 🚀 Personal Portfolio Website
-Welcome to my personal portfolio! This project showcases my skills, projects, and experience as a frontend developer.
+Welcome to my personal portfolio! This project showcases my skills, projects, and experience as a frontend 
 
-🧑‍💻 About Me
 Hi, Tsepo Khoza, a passionate MERN stack developer focused on building modern, responsive, and user-friendly web applications. I enjoy turning complex problems into simple, beautiful, and intuitive designs.
 
 🌐 Live Demo
