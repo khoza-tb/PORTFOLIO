@@ -6,7 +6,7 @@ This website showcases my skills, projects, experience, and journey as a **Softw
 
 ## 🌐 Live Website
 
-🔗 **Portfolio:** [Visit My Portfolio](https://your-vercel-domain.vercel.app)
+🔗 **Portfolio:** [Visit My Portfolio](https://portfolio-three-hazel-70.vercel.app/)
 
 🔗 **GitHub:** [github.com/khoza-tb](https://github.com/khoza-tb)
 
