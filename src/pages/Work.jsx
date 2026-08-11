@@ -1,70 +1,15 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { FaGithub } from "react-icons/fa";
+import { ExternalLink, ArrowUpRight } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
-const Work = () => {
-  const { theme } = useTheme();
-  const isDark = theme === "dark";
-
-  const cardBg = isDark ? "bg-gray-800 text-gray-200" : "bg-white text-gray-800";
-  const buttonBg = isDark ? "bg-blue-600 hover:bg-blue-500" : "bg-blue-500 hover:bg-blue-600";
-
-  const projects = [
-    {
-      title: "Quiz Application",
-      desc: "A full-featured web quiz app built with React, allowing users to test knowledge in various topics.",
-      demo: "https://quizapplication-rho.vercel.app",
-      github: "https://github.com/khoza-tb/Application-Quiz"
-    },
-    {
-      title: "Portfolio Website",
-      desc: "My personal developer portfolio showcasing projects, skills, and experience.",
-      demo: "https://portfolio-three-hazel-70.vercel.app",
-      github: "https://github.com/khoza-tb/PORTFOLIO"
-    },
-    {
-      title: "Clock-In System",
-      desc: "A web-based clock-in/out system built with React and Node.js, tracking employee attendance and work hours.",
-      demo: "https://clock-in-system.vercel.app", // replace with actual live demo if deployed
-      github: "https://github.com/khoza-tb/Erisn-Clock-In-Frontend" // replace with your repo
-    },
-    // Add more projects here if needed
-  ];
-
-  return (
-    <div className={`min-h-screen py-12 px-4 sm:px-6 lg:px-8 ${isDark ? "bg-black" : "bg-gray-100"} transition-colors duration-300`}>
-      <h1 className="text-4xl font-extrabold text-center mb-12">My Work</h1>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project, index) => (
-          <div key={index} className={`p-6 rounded-lg shadow-lg ${cardBg} transition hover:shadow-2xl`}>
-            <h2 className="text-2xl font-bold mb-3">{project.title}</h2>
-            <p className="mb-4">{project.desc}</p>
-            <div className="flex gap-4">
-              <a
-                href={project.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`px-4 py-2 rounded-md text-white font-semibold flex items-center gap-2 ${buttonBg} transition`}
-              >
-                <FaExternalLinkAlt />
-                Live Demo
-              </a>
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`px-4 py-2 rounded-md border flex items-center gap-2 ${isDark ? "border-gray-400" : "border-gray-700"} font-semibold hover:bg-gray-300 hover:text-black transition`}
-              >
-                <FaGithub />
-                GitHub
-              </a>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-export default Work;
+const projects=[
+ {title:'GadgetHub',type:'E-Commerce Storefront',desc:'A responsive electronics storefront with category browsing, cart functionality, quantity controls and WhatsApp ordering.',tech:['HTML','CSS','JavaScript','LocalStorage','Vercel'],demo:'https://gadgethub-khoza-tbs-projects.vercel.app',github:'https://github.com/khoza-tb/gadgethub',tone:'from-blue-600 to-cyan-500'},
+ {title:'Employee Management System',type:'Full-Stack Application',desc:'A workforce management platform focused on employee profiles, attendance, leave requests and administration.',tech:['React','Node.js','Express','MySQL'],github:'https://github.com/khoza-tb',tone:'from-violet-600 to-fuchsia-500'},
+ {title:'Quiz Application',type:'Interactive Web App',desc:'A responsive quiz experience that lets users test their knowledge through an interactive interface.',tech:['React','JavaScript','CSS'],demo:'https://quizapplication-rho.vercel.app',github:'https://github.com/khoza-tb/Application-Quiz',tone:'from-emerald-600 to-teal-500'},
+ {title:'Portfolio Website',type:'Personal Developer Site',desc:'A responsive developer portfolio designed to present projects, skills, experience and contact information.',tech:['React','Vite','Tailwind CSS','Framer Motion'],demo:'https://portfolio-three-hazel-70.vercel.app',github:'https://github.com/khoza-tb/PORTFOLIO',tone:'from-orange-500 to-rose-500'},
+ {title:'JobFindr',type:'Job Portal',desc:'A job-focused web application concept for discovering opportunities through a clean, user-friendly experience.',tech:['React','JavaScript','CSS'],github:'https://github.com/khoza-tb',tone:'from-sky-600 to-indigo-500'},
+ {title:'UNISA Tutorial Platform',type:'Academic Support',desc:'A student-focused platform concept for organizing academic resources and digital learning support.',tech:['React','Tailwind CSS','Node.js','MySQL'],github:'https://github.com/khoza-tb',tone:'from-pink-600 to-purple-500'}
+];
+const Work=()=>{const {theme}=useTheme();const dark=theme==='dark';return <main className={dark?'min-h-screen bg-slate-950 text-white':'min-h-screen bg-slate-50 text-slate-950'}><section className="mx-auto max-w-7xl px-6 pb-20 pt-32"><div className="max-w-3xl"><p className="font-semibold uppercase tracking-[.25em] text-blue-500">Selected work</p><h1 className="mt-3 text-4xl font-black sm:text-6xl">Projects built to solve real problems.</h1><p className="mt-6 text-lg leading-8 text-slate-500">A selection of applications and concepts that show how I approach interfaces, APIs, data and deployment.</p></div><div className="mt-14 grid gap-7 md:grid-cols-2 lg:grid-cols-3">{projects.map((p,i)=><motion.article key={p.title} initial={{opacity:0,y:25}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*.05}} whileHover={{y:-6}} className={`overflow-hidden rounded-3xl border ${dark?'border-slate-800 bg-slate-900':'border-slate-200 bg-white shadow-sm'}`}><div className={`relative flex h-48 items-end bg-gradient-to-br ${p.tone} p-6`}><div className="absolute right-5 top-5 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold text-white backdrop-blur">{String(i+1).padStart(2,'0')}</div><div><p className="text-sm font-medium text-white/80">{p.type}</p><h2 className="mt-1 text-3xl font-black text-white">{p.title}</h2></div></div><div className="p-6"><p className="min-h-20 text-sm leading-6 text-slate-500">{p.desc}</p><div className="mt-4 flex flex-wrap gap-2">{p.tech.map(t=><span key={t} className={`rounded-full px-2.5 py-1 text-xs ${dark?'bg-slate-800 text-slate-300':'bg-slate-100 text-slate-600'}`}>{t}</span>)}</div><div className="mt-6 flex flex-wrap gap-3">{p.demo&&<a href={p.demo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-blue-500"><ExternalLink size={16}/> Live demo</a>}<a href={p.github} target="_blank" rel="noreferrer" className={`inline-flex items-center gap-2 rounded-xl border px-4 py-2.5 text-sm font-semibold ${dark?'border-slate-700 hover:border-blue-500':'border-slate-300 hover:border-blue-500'}`}><FaGithub/> GitHub <ArrowUpRight size={14}/></a></div></div></motion.article>)}</div></section></main>};export default Work;

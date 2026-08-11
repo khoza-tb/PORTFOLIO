@@ -1,106 +1,32 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { BriefcaseBusiness, Lightbulb, Users, Target } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
-import { FaLaptopCode, FaServer, FaUserShield, FaBrain } from "react-icons/fa";
 
 const About = () => {
   const { theme } = useTheme();
-  const isDark = theme === "dark";
-
-  const containerBg = isDark ? "bg-black" : "bg-white";
-  const textPrimary = isDark ? "text-gray-300" : "text-gray-700";
-  const textSecondary = isDark ? "text-blue-400" : "text-blue-600";
-
-  const skills = [
-    {
-      icon: FaLaptopCode,
-      title: "Frontend Development",
-      desc: "Building responsive and interactive user interfaces using React and modern CSS frameworks.",
-    },
-    {
-      icon: FaServer,
-      title: "Backend Development",
-      desc: "Developing REST APIs and scalable backend systems using Node.js and Express.",
-    },
-    {
-      icon: FaUserShield,
-      title: "Cybersecurity",
-      desc: "Implementing secure authentication, data protection, and best security practices.",
-    },
-    {
-      icon: FaBrain,
-      title: "Problem Solving",
-      desc: "Strong analytical skills with a passion for solving complex technical challenges.",
-    },
+  const dark = theme === "dark";
+  const cards = [
+    [BriefcaseBusiness, "Build", "I enjoy turning requirements into reliable, responsive applications."],
+    [Lightbulb, "Think", "I break technical problems into clear steps and practical solutions."],
+    [Users, "Collaborate", "I value communication, Git workflows and constructive teamwork."],
+    [Target, "Improve", "I continuously refine my skills through projects and hands-on learning."],
   ];
-
-  return (
-    <div className={`${containerBg} min-h-screen transition-colors duration-300`}>
-      <div className="max-w-6xl mx-auto px-6 pt-28 pb-20">
-
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl font-extrabold mb-6">
-            <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
-              About Me
-            </span>
-          </h1>
-
-          <p className={`text-lg max-w-3xl mx-auto leading-relaxed ${textPrimary}`}>
-            I am Tsepo Bonginkosi Khoza, a passionate Full Stack Developer specializing
-            in the MERN stack. As a recent Computer Science graduate, I am driven
-            by innovation, continuous learning, and building scalable digital
-            solutions that make an impact.
-          </p>
-        </div>
-
-        {/* My Journey */}
-        <div className="mb-20">
-          <h2 className={`text-2xl font-bold mb-6 ${textSecondary}`}>
-            My Journey
-          </h2>
-
-          <p className={`leading-relaxed mb-6 ${textPrimary}`}>
-            My journey into software development began with a deep curiosity
-            about how systems work behind the scenes. Over time, I developed
-            strong skills in JavaScript, React, Node.js, MongoDB, and modern
-            web technologies.
-          </p>
-
-          <p className={`leading-relaxed ${textPrimary}`}>
-            I enjoy building full-stack applications, designing clean database
-            structures, and implementing secure authentication systems. My goal
-            is to grow into a senior developer role and contribute to impactful
-            technology-driven projects.
-          </p>
-        </div>
-
-        {/* Skills Section */}
-        <div>
-          <h2 className={`text-2xl font-bold mb-10 ${textSecondary}`}>
-            What I Do
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {skills.map((skill, index) => (
-              <div
-                key={index}
-                className={`p-6 rounded-xl transition hover:shadow-lg ${
-                  isDark
-                    ? "bg-gray-900 border border-gray-700"
-                    : "bg-gray-50 border border-gray-200"
-                }`}
-              >
-                <skill.icon className="text-3xl text-blue-500 mb-4" />
-                <h3 className="font-bold text-lg mb-2">{skill.title}</h3>
-                <p className={`text-sm ${textPrimary}`}>{skill.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
+  return <main className={dark ? "min-h-screen bg-slate-950 text-white" : "min-h-screen bg-slate-50 text-slate-950"}>
+    <section className="mx-auto max-w-6xl px-6 pb-20 pt-32">
+      <motion.div initial={{opacity:0,y:25}} animate={{opacity:1,y:0}} className="max-w-3xl">
+        <p className="font-semibold uppercase tracking-[.25em] text-blue-500">About me</p>
+        <h1 className="mt-3 text-4xl font-black sm:text-6xl">A developer who likes to build things that matter.</h1>
+        <p className={`mt-7 text-lg leading-8 ${dark ? "text-slate-300" : "text-slate-600"}`}>I'm Tsepo Khoza, a Full-Stack Software Developer with a Diploma in Information Technology specializing in Software Development. I enjoy creating practical web applications, learning modern technologies and solving technical problems from both a software and IT-support perspective.</p>
+      </motion.div>
+      <div className="mt-14 grid gap-6 md:grid-cols-2">
+        {cards.map(([Icon,title,desc],i)=><motion.article key={title} initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*.08}} className={`rounded-2xl border p-7 transition hover:-translate-y-1 ${dark?"border-slate-800 bg-slate-900":"border-slate-200 bg-white shadow-sm"}`}><Icon className="text-blue-500" size={28}/><h2 className="mt-5 text-xl font-bold">{title}</h2><p className="mt-2 leading-7 text-slate-500">{desc}</p></motion.article>)}
       </div>
-    </div>
-  );
+      <div className={`mt-14 rounded-3xl border p-8 sm:p-10 ${dark?"border-slate-800 bg-slate-900/70":"border-slate-200 bg-white"}`}>
+        <h2 className="text-2xl font-bold">My approach</h2>
+        <div className="mt-6 grid gap-6 sm:grid-cols-3"><div><b>01 · Understand</b><p className="mt-2 text-sm leading-6 text-slate-500">Understand the user, requirements and problem before coding.</p></div><div><b>02 · Build</b><p className="mt-2 text-sm leading-6 text-slate-500">Create clean interfaces, APIs and data flows that work together.</p></div><div><b>03 · Improve</b><p className="mt-2 text-sm leading-6 text-slate-500">Test, troubleshoot, deploy and keep improving the result.</p></div></div>
+      </div>
+    </section>
+  </main>;
 };
-
 export default About;
